@@ -1,9 +1,7 @@
 # Makefile for VLDP2
 # Written by Matt Ownby
 
-# TODO: Add dependencies
-
-CFLAGS = ${DFLAGS} `sdl-config --cflags` -I./include
+CFLAGS += ${DFLAGS} -fPIC `sdl-config --cflags` -I./include
 LIBS = `sdl-config --libs`
 
 OBJS =  vldp/vldp.o vldp/vldp_internal.o vldp/mpegscan.o \
